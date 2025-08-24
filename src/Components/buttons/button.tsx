@@ -5,7 +5,8 @@ const Button = ({ text, className, onClick }: ButtonInterface) => {
   return (
     <div
       onClick={onClick}
-      className={`flex justify-center items-center p-5 [100px] bg-primary border m-5 ${className}`}
+      className={`flex justify-center items-center px-3 py-1 bg-[#4762FF] hover:bg-[#2f4eff] text-white border w-fit 
+        rounded-md cursor-pointer ${className}`}
     >
       {text}
     </div>
@@ -13,3 +14,4 @@ const Button = ({ text, className, onClick }: ButtonInterface) => {
 };
 
 export default Button;
+  
