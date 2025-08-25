@@ -1,7 +1,7 @@
-import { ButtonInterface } from "@/interfaces/button-interface";
+import { ButtonI } from "@/interfaces/button-interface";
 import React from "react";
 
-const Button = ({ text, className, onClick }: ButtonInterface) => {
+const Button = ({ text, className, onClick }: ButtonI) => {
   return (
     <div
       onClick={onClick}

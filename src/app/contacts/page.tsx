@@ -1,5 +1,5 @@
 import React from "react";
-import КонтактыServicesIndex from "../../view/Контакты";
+import КонтактыServicesIndex from "../../views/Контакты";
 
 const КонтактыServicesPage = () => <КонтактыServicesIndex />;
 

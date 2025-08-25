@@ -1,5 +1,5 @@
 import React from "react";
-import АвотпоэтомуContactIndex from "../../view/А вот поэтому";
+import АвотпоэтомуContactIndex from "../../views/А-вот-поэтому";
 
 const АвотпоэтомуContactPage = () => <АвотпоэтомуContactIndex />;
 

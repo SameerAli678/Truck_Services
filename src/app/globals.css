@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -8,3 +12,29 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Size  */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4762ff;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5c74f7;
+}
+/* Input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+/* input[type="number"] {
+  -moz-appearance: textfield;
+} */

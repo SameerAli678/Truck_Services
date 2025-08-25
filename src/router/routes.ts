@@ -1,10 +1,10 @@
 // src/router/routes.ts
 
 const urls = {
-  contact: "/А-вот-поэтому", // А вот поэтому
-  services: "/Контакты", // Контакты
-  About: "/Почему-мы", // Почему мы
-  home: "/Это-мы", // Это мы
+  services: "/services", // А-вот-поэтому
+  contacts: "/contacts", // Контакты
+  about: "/about", // Почему-мы
+  home: "/", // Это-мы
 };
 
 export default urls;

@@ -1,8 +1,9 @@
 import urls from "@/router/routes";
+import { navbarT } from "@/types/layout-types/navbar-type";
 
-export const NavbarData = [
+export const NavbarData: navbarT[] = [
   { link: urls.home, name: "Это мы" },
-  { link: urls.services, name: "Контакты" },
-  { link: urls.About, name: "Почему мы" },
-  { link: urls.contact, name: "А вот поэтому" },
+  { link: urls.contacts, name: "Контакты" },
+  { link: urls.about, name: "Почему мы" },
+  { link: urls.services, name: "А вот поэтому" },
 ];

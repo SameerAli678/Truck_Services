@@ -1,5 +1,5 @@
 import React from "react";
-import ПочемумыAboutIndex from "../../view/Почему мы";
+import ПочемумыAboutIndex from "../../views/Почему-мы";
 
 const ПочемумыAboutPage = () => <ПочемумыAboutIndex />;
 
