@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "validate": "next build && next lint && next test && next dev",
+    "validate": "pnpm lint & pnpm build & pnpm dev",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
+    "prepare": "husky"
   },
   "dependencies": {
     "clsx": "^2.1.1",

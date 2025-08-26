@@ -1,5 +1,5 @@
 import React from "react";
-import ЭтомыHomeIndex from "@/views/Это-мы";
+import ЭтомыHomeIndex from "@/views/Home";
 
 const ЭтомыHomePage = () => <ЭтомыHomeIndex />;
 

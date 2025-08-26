@@ -4,8 +4,6 @@ import React from "react";
 import trucks from "@/../public/images/trucks.png";
 import Heading from "./heading";
 import Paragraph from "./paragraph";
-import Paragra from "./paragraph";
-
 
 const HeroSection = () => {
   return (
