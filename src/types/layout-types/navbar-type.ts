@@ -1,11 +1,14 @@
 // src/types/layout-types/navbar-type.ts
 
+import { Dispatch } from "react";
+
 export type navbarT = {
   link: string;
   name: string;
 };
 
-export type Type = {
+export interface SidebarT {
   isOpen: boolean;
-  setIsOpen: (isOpen: boolean) => void;
-};
+  onCloser: () => void;
+  setIsOpen: Dispatch<React.SetStateAction<boolean>>;
+}

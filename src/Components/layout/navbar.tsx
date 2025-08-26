@@ -6,19 +6,22 @@ import logo from "../../../public/images/logo.png";
 import location from "../../../public/icons/location.svg";
 import phone from "../../../public/icons/phone.svg";
 import timeDuration from "../../../public/icons/time-duration.svg";
+import sidebarOpen from "../../../public/images/sidebaropen.png";
 import { useRouter } from "next/navigation";
 import urls from "@/router/routes";
 import Button from "../buttons/button";
 import { NavbarData } from "@/constant/layout-constant/navbar-data";
 import Link from "next/link";
+import SideBar from "./sidebar";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
   const { push } = useRouter();
   return (
-    <div className="w-full flex justify-center items-center bg-white">
+    <div className="w-full flex justify-center items-center bg-white shadow-xl fixed top-0 z-50">
       <div className="flex flex-col w-full max-w-6xl">
         {/* 1st Section of Navbar */}
-        <div className="flex justify-between items-center px-10 py-5 gap-x-5">
+        <div className="hidden md:flex justify-between items-center px-10 py-5 gap-x-5">
           {/* location & Border & Time Duration */}
           <div className="flex items-center gap-x-5">
             {/* Location */}
@@ -53,10 +56,12 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+
         {/* 2nd Section And Border Section */}
-        <div className="flex border border-border" />
+        <div className="hidden md:flex border border-border" />
+
         {/* 3rd Section of Navbar */}
-        <div className="flex justify-between items-center px-3 py-5 ">
+        <div className="flex justify-between items-center px-3 py-5">
           <Image
             src={logo}
             alt="logo"
@@ -66,7 +71,7 @@ const Navbar = () => {
             className="cursor-pointer"
           />
           {/* Pages */}
-          <div className="flex gap-x-4 text-black font-medium">
+          <div className="hidden md:flex gap-x-4 text-black font-medium">
             {NavbarData.map((item, index) => (
               <Link key={index} href={item.link} className="cursor-pointer">
                 <div className="flex gap-x-4 text-sm font-medium ">
@@ -75,8 +80,24 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
-          <Button text="Заказать звонок" className="" />
+          <Button text="Заказать звонок" className="hidden md:flex" />
+          <div className="md:hidden cursor-pointer">
+            <Image
+              src={sidebarOpen}
+              alt="sidebarOpen"
+              width={40}
+              height={50}
+              onClick={() => setIsOpen(!isOpen)}
+            />
+          </div>
         </div>
+
+        {/* SideBar open */}
+        <SideBar
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          onCloser={() => setIsOpen(false)}
+        />
       </div>
     </div>
   );

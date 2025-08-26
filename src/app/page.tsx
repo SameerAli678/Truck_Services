@@ -1,5 +1,6 @@
-import Button from "@/Components/buttons/button";
+import React from "react";
+import ЭтомыHomeIndex from "@/views/Home";
 
-export default function Home() {
-  return <div></div>;
-}
+const ЭтомыHomePage = () => <ЭтомыHomeIndex />;
+
+export default ЭтомыHomePage;
