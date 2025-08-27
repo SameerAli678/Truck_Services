@@ -13,10 +13,10 @@ const ContactSection = () => {
           alt="contactBg"
           width={800}
           height={500}
-          className=" flex w-[1800px] h-[300px] md:h-[400px] object-cover"
+          className=" flex w-[2000px] h-[300px] md:h-[500px] object-cover"
         />
       </div>
-      <div className="absolute right-9 top-1/2 -1/2 -translate-x-1/2 -translate-y-1/2">
+      <div className="absolute right-9 top-1/2 -translate-x-1/2 -translate-y-1/2">
         <ContactFrom />
       </div>
     </div>
