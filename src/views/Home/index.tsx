@@ -1,3 +1,4 @@
+// src
 import React from "react";
 import HeroSection from "@/components/common/hero-section";
 import ServiceCard from "@/components/common/service-card";
@@ -8,6 +9,8 @@ import Brands from "@/components/common/brands";
 import Location from "@/components/common/location";
 import ContactSection from "@/components/common/contact-section";
 import ContactFrom from "@/components/common/contact-from";
+import TruckServices from "@/components/common/truck-services";
+import DriverServices from "@/components/common/driver-services";
 
 const ЭтомыHomeIndex = () => {
   return (
@@ -43,11 +46,17 @@ const ЭтомыHomeIndex = () => {
       {/* Location Section */}
       <Location />
 
+      {/* Truck Services */}
+      <TruckServices />
+
+      {/* DriverServices */}
+      <DriverServices />
+
       {/* Contact Section */}
       <div className="hidden md:flex">
         <ContactSection />
       </div>
-      <div className="flex md:hidden">
+      <div className="flex md:hidden p-4">
         <ContactFrom />
       </div>
     </div>
