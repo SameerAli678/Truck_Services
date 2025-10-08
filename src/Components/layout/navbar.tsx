@@ -2,21 +2,18 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import logo from "../../../public/images/logo.png";
 import location from "../../../public/icons/location.svg";
 import phone from "../../../public/icons/phone.svg";
 import timeDuration from "../../../public/icons/time-duration.svg";
 import sidebarOpen from "../../../public/images/sidebaropen.png";
-import { useRouter } from "next/navigation";
-import urls from "@/router/routes";
-import Button from "../buttons/button";
 import { NavbarData } from "@/constant/layout-constant/navbar-data";
 import Link from "next/link";
 import SideBar from "./sidebar";
+import Logo from "../common/logo";
+import Button from "../buttons/button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const { push } = useRouter();
   return (
     <div className="w-full flex justify-center items-center bg-white shadow-xl fixed top-0 z-50">
       <div className="flex flex-col w-full max-w-6xl">
@@ -62,14 +59,7 @@ const Navbar = () => {
 
         {/* 3rd Section of Navbar */}
         <div className="flex justify-between items-center px-3 py-5">
-          <Image
-            src={logo}
-            alt="logo"
-            width={150}
-            height={50}
-            onClick={() => push(urls.home)}
-            className="cursor-pointer"
-          />
+          <Logo />
           {/* Pages */}
           <div className="hidden md:flex gap-x-4 text-black font-medium">
             {NavbarData.map((item, index) => (
