@@ -15,13 +15,13 @@ const DriverServices = () => {
     <Carousel className="relative flex w-full">
       <CarouselContent>
         {DriverServicesData.map((icon, index) => (
-          <CarouselItem key={index}>
+          <CarouselItem key={index} className="w-full flex object-cover">
             <Image
               src={icon.image}
               alt=" "
-              width={1000}
-              height={1000}
-              className="flex w-full h-[500px] "
+              width={500}
+              height={80}
+              className="w-full h-[500px] object-cover"
             />
           </CarouselItem>
         ))}
