@@ -15,7 +15,7 @@ import Button from "../buttons/button";
 
 const TruckServices = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-y-7">
+    <div className="flex flex-col justify-center items-center gap-y-7 border">
       <div className="flex flex-col px-2 justify-center items-center gap-y-4 w-full max-w-7xl text-center">
         <Heading text="Truck Services" />
         <Paragraph
