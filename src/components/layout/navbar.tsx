@@ -11,6 +11,7 @@ import Link from "next/link";
 import SideBar from "./sidebar";
 import Logo from "../common/logo";
 import Button from "../buttons/button";
+import urls from "@/router/routes";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -70,7 +71,11 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
-          <Button text="Заказать звонок" className="hidden md:flex" />
+          <Button
+            text="Заказать звонок"
+            className="hidden md:flex"
+            onClick={() => urls.contacts}
+          />
           <div className="md:hidden cursor-pointer">
             <Image
               src={sidebarOpen}

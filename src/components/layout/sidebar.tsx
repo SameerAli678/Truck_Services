@@ -7,6 +7,7 @@ import Image from "next/image";
 import location from "../../../public/icons/location.svg";
 import phone from "../../../public/icons/phone.svg";
 import timeDuration from "../../../public/icons/time-duration.svg";
+import urls from "@/router/routes";
 
 const SideBar: React.FC<SidebarT> = ({ isOpen, onCloser }) => {
   if (!isOpen) return null;
@@ -27,7 +28,11 @@ const SideBar: React.FC<SidebarT> = ({ isOpen, onCloser }) => {
       </div>
 
       {/* Button */}
-      <Button text="Заказать звонок" className="" />
+      <Button
+        text="Заказать звонок"
+        className=""
+        onClick={() => urls.contacts}
+      />
 
       {/* #rd Section */}
       <div className="flex flex-col gap-y-5">

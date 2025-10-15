@@ -4,6 +4,7 @@ import Button from "../buttons/button";
 import Input from "../inputs/input ";
 import Heading from "./heading";
 import Paragraph from "./paragraph";
+import urls from "@/router/routes";
 
 const ContactFrom = () => {
   return (
@@ -27,7 +28,11 @@ const ContactFrom = () => {
               placeholder="Номер телефона"
             />
           </div>
-          <Button text="Отправить" className="flex w-full" />
+          <Button
+            text="Отправить"
+            className="flex w-full"
+            onClick={() => urls.contacts}
+          />
         </CardContent>
       </Card>
     </div>

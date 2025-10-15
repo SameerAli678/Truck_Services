@@ -1,6 +1,7 @@
+// src/app/contacts/page.tsx
 import React from "react";
-import АвотпоэтомуContactIndex from "../../views/Contacts";
+import ServicesIndex from "../../views/Services";
 
-const АвотпоэтомуContactPage = () => <АвотпоэтомуContactIndex />;
+const ServicesPage = () => <ServicesIndex />;
 
-export default АвотпоэтомуContactPage;
+export default ServicesPage;

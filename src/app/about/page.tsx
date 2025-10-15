@@ -1,6 +1,7 @@
+// src/app/about/page.tsx
 import React from "react";
-import ПочемумыAboutIndex from "../../views/About";
+import AboutIndex from "../../views/About";
 
-const ПочемумыAboutPage = () => <ПочемумыAboutIndex />;
+const AboutPage = () => <AboutIndex />;
 
-export default ПочемумыAboutPage;
+export default AboutPage;

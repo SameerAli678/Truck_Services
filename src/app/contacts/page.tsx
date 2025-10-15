@@ -1,6 +1,7 @@
+// src/app/contacts/page.tsx
 import React from "react";
-import КонтактыServicesIndex from "../../views/Services";
+import ContactIndex from "../../views/Contacts";
 
-const КонтактыServicesPage = () => <КонтактыServicesIndex />;
+const contactPage = () => <ContactIndex />;
 
-export default КонтактыServicesPage;
+export default contactPage;

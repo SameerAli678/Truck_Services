@@ -4,6 +4,7 @@ import React from "react";
 import trucks from "@/../public/images/trucks.png";
 import Heading from "./heading";
 import Paragraph from "./paragraph";
+import urls from "@/router/routes";
 
 const HeroSection = () => {
   return (
@@ -15,7 +16,11 @@ const HeroSection = () => {
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in
           et, lectus sit lorem id integer."
         />
-        <Button text="Чета сделать" className="" />
+        <Button
+          text="Чета сделать"
+          className=""
+          onClick={() => urls.contacts}
+        />
       </div>
       <Image src={trucks} alt="truck" width={600} height={400} />
     </div>

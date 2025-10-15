@@ -14,4 +14,3 @@ const Button = ({ text, className, onClick }: ButtonI) => {
 };
 
 export default Button;
-  

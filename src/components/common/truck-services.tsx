@@ -1,3 +1,6 @@
+// src/components/common/truck-services.tsx
+
+"use client";
 import * as React from "react";
 
 import {
@@ -12,16 +15,20 @@ import { TruckServicesData } from "@/constant/common/truck-services-data";
 import Heading from "./heading";
 import Paragraph from "./paragraph";
 import Button from "../buttons/button";
+import { useRouter } from "next/navigation";
+import urls from "@/router/routes";
 
 const TruckServices = () => {
+  const { push } = useRouter();
+
   return (
-    <div className="flex flex-col justify-center items-center gap-y-7 border">
+    <div className="flex flex-col justify-center items-center gap-y-7">
       <div className="flex flex-col px-2 justify-center items-center gap-y-4 w-full max-w-7xl text-center">
         <Heading text="Truck Services" />
         <Paragraph
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer."
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer."
         />
       </div>
       <Carousel className="relative flex w-full">
@@ -38,10 +45,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="absolute top-1/2 left-5 md:left-13 -translate-y-1/2 bg-amber-50" />
-        <CarouselNext className="absolute top-1/2 right-5 md:right-13 -translate-y-1/2 bg-amber-50" />
+        <CarouselPrevious className="absolute top-1/2 left-5 md:left-13 -translate-y-1/2 bg-amber-50 cursor-pointer" />
+        <CarouselNext className="absolute top-1/2 right-5 md:right-13 -translate-y-1/2 bg-amber-50 cursor-pointer" />
       </Carousel>
-      <Button text="Go to А-вот-поэтому" className="py-3 px-5" />
+      <Button
+        text="Go to А-вот-поэтому"
+        className="py-3 px-5"
+        onClick={() => push(urls.services)}
+      />
     </div>
   );
 };

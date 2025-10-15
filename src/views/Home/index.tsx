@@ -1,4 +1,6 @@
-// src
+// src/views/Home/index.tsx
+
+"use client";
 import React from "react";
 import HeroSection from "@/components/common/hero-section";
 import ServiceCard from "@/components/common/service-card";
@@ -11,8 +13,12 @@ import ContactSection from "@/components/common/contact-section";
 import ContactFrom from "@/components/common/contact-from";
 import TruckServices from "@/components/common/truck-services";
 import DriverServices from "@/components/common/driver-services";
+import Button from "@/components/buttons/button";
+import urls from "@/router/routes";
+import { useRouter } from "next/navigation";
 
-const ЭтомыHomeIndex = () => {
+const HomeIndex = () => {
+  const { push } = useRouter();
   return (
     <div className="flex flex-col gap-y-13 justify-center items-center w-full">
       {/* HeroSection */}
@@ -52,6 +58,13 @@ const ЭтомыHomeIndex = () => {
       {/* DriverServices */}
       <DriverServices />
 
+      {/* Button Do to Services */}
+      <Button
+        text="Go to А-вот-поэтому"
+        className="py-3 px-5"
+        onClick={() => push(urls.services)}
+      />
+
       {/* Contact Section */}
       <div className="hidden md:flex">
         <ContactSection />
@@ -63,4 +76,4 @@ const ЭтомыHomeIndex = () => {
   );
 };
 
-export default ЭтомыHomeIndex;
+export default HomeIndex;
